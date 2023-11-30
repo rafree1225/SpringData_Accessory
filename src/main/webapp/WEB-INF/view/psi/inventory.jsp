@@ -6,7 +6,30 @@
     <head>
         <!-- Head -->
         <%@include file="../include/head.jspf"  %>
+        
+        <style>
+            legend, 
+            .pure-table thead th {
+                font-weight: bold; /* 將字體設為粗體 */
+            }
 
+            .pure-form legend {
+                color: 	#000000; /* 黑色 */
+            }
+            .pure-form input {
+                color: #6C6C6C; /* 深灰色 */
+            }
+            .pure-table thead th {
+                background-color: #0072E3; /* 深藍色 */
+                color: 	#FFFFFF; /* 白色 */
+            }
+            .pure-table tbody td {
+                background-color: #FFFFFF; /* 白色 */
+                color:#000000; /* 黑色 */
+            }
+
+        </style>
+        
     </head>
     <body style="padding: 10px">
 

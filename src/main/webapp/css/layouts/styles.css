@@ -1,0 +1,306 @@
+body {
+   background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-size:cover; /*讓圖片完全填滿整個容器 */
+    background-repeat: repeat;
+
+}
+
+
+.image-container {
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    height: 500px; /* 設置容器的高度，根據需要調整 */
+    margin-top: 20px; /* 設定上方間距，根據需要調整數值 */
+    margin-right: 20px; /* 設定上方間距，根據需要調整數值 */
+    margin-left: 100px; /* 設定上方間距，根據需要調整數值 */
+    margin-bottom: 90px; /* 設定上方間距，根據需要調整數值 */
+}
+
+.image-container img {
+    max-width: 100%; /* 確保圖片不超出容器寬度 */
+    max-height: 100%; /* 確保圖片不超出容器高度 */
+}
+
+
+.pure-img-responsive {
+    max-width: 400px;  /* 确保图片不超过其容器的宽度 */
+    height: auto;    /* 高度自动调整以保持图片比例 */
+    margin: 10px auto; /* 上下保持10px间距，左右自动（实现水平居中） */
+    width: 100%;     /* 将图片宽度设置为容器宽度的150% */
+    display: block;  /* 将图片显示为块级元素，允许使用margin:auto */
+}
+
+.pure-table th {
+    text-align: center; /* 或 left，根據您想要的對齊方式 */
+    vertical-align: middle; /* 確保文字垂直居中 */
+    writing-mode: horizontal-tb; /* 設置文字水平顯示 */
+}
+
+
+#layout,
+#menu,
+.menu-link {
+    transition: all 0.2s ease-out;
+}
+
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+
+#layout.active #menu {
+    left: 150px;
+    width: 150px;
+}
+
+#layout.active .menu-link {
+    left: 150px;
+}
+
+
+.content {
+    margin: 0 auto;
+    padding: 0 2em;
+    max-width: 800px;
+    margin-bottom: 50px;
+    line-height: 1.6em;
+
+}
+
+
+
+.header {
+    margin: 0;
+    color: #0066CC;
+    text-align: center;
+    padding: 2.5em 2em 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+    margin: 0.2em 0;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.header h2 {
+    font-weight: 2em;
+    color: #00000;
+    margin-top: 0;
+}
+
+.content-subhead {
+    margin: 20px 0px 20px;
+    font-weight: bold; /* 將文字設為粗體 */
+    font-size:2em;
+    color:#BF0060;
+}
+
+.subhead-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许内容换行 */
+    justify-content: space-around;
+    padding-left: 150px;
+    padding-right: 50px;
+}
+
+
+.subhead-box {
+    flex: 4;/* 让子项等分父容器的宽度 */
+    margin: 50px; /* 设置子项之间的间距 */
+    padding: 80px; /* 調整上下左右的內邊距，根據需要調整數值 */
+    border-right: 1px solid #FFFFFF;
+    display: flex; /* 使用 Flex 布局 */
+    max-width: 500px; /* 设置子项的最大宽度 */
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    text-align: center; /* 文字水平居中 */
+    background-size: cover;
+    background-position: center;
+/*    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+
+/* 初始状态下隐藏说明文字 */
+.subhead-box::before {
+    content: "";
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明背景颜色 */
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+/* 鼠标滑过时显示说明文字 */
+.subhead-box:hover::before {
+    display: block;
+}
+
+/* 调整说明文字的位置和样式 */
+.subhead-box:hover::before {
+    /* 您可以根据需要调整说明文字的样式和位置 */
+    content: "點擊前往頁面"; /* 替换为您的说明文字 */
+    /* 其他样式属性 */
+}
+
+
+/* 新增以下樣式以顯示內容在圖片下方 */
+.subhead-content {
+    text-align: center; /* 文字置中 */
+    margin-top: 0px; /* 調整內容與圖片之間的間距，根據需要調整數值 */
+}
+
+.subhead-content h2 {
+    margin: 30px;
+}
+
+
+/* 為了移除最後一個盒子的分隔線 */
+.subhead-box:last-child {
+    border-right: none;
+}
+
+
+#menu {
+    margin-left: -150px;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    /*background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%); Updated background color */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#menu a {
+    color: #fff;
+    padding: 0.5em 0.5em 0.5em 0.1em;
+    font-weight: bold; /* 將文字設為粗體 */
+    font-size: 20px; /* 設置字體大小 */
+    text-align: center; /* 設置文字置中 */
+}
+
+#menu .pure-menu,
+#menu .pure-menu ul {
+    background: transparent;
+}
+
+#menu .pure-menu ul,
+#menu .pure-menu .menu-item-divided {
+    border-top: 1px solid #333;
+}
+
+#menu .pure-menu li a:hover,
+#menu .pure-menu li a:focus {
+    background: #2894FF; /* 滑鼠懸停或聚焦時的背景顏色 */
+    color: #fff;
+}
+
+#menu .pure-menu-selected,
+#menu .pure-menu-heading {
+    background: #1f8dd6;
+}
+
+#menu .pure-menu-selected a {
+    color: #fff;
+}
+
+#menu .pure-menu-heading {
+    font-size: 110%;
+    color: #fff;
+}
+
+.menu-link {
+    position: fixed;
+    display: block;
+    top: 0;
+    background: rgba(0,0,0,0.7);
+    font-size: 100px;
+    z-index: 10;
+    width: 2em;
+    padding: 2.1em 1.6em;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+    background: #000;
+}
+
+.menu-link span,
+.menu-link span:before,
+.menu-link span:after {
+    background-color: #fff;
+    width: 100%;
+    height: 0.2em;
+}
+
+.menu-link span:before,
+.menu-link span:after {
+    position: absolute;
+    margin-top: -0.6em;
+    content: " ";
+}
+
+.menu-link span:after {
+    margin-top: 0.6em;
+}
+
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.button-secondary {
+    background:#BF0060;
+}
+
+
+
+
+@media (min-width: 48em) {
+    .header,
+    .content {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    #layout {
+        padding-left: 150px;
+    }
+    #menu {
+        left: 150px;
+    }
+
+    .menu-link {
+        display: none;
+    }
+}
+
+@media (max-width: 48em) {
+    #layout.active {
+        left: 150px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .pure-img-responsive {
+        width: 100%; /* 在小螢幕上，將圖片寬度設為100% */
+    }
+
+
+
+}
+
+
