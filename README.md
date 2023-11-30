@@ -3,7 +3,7 @@
 
 系統各頁面截圖：
 
-![image](https://github.com/rafree1225/SpringData_Accessory/assets/68884317/48f707ad-1c3c-4845-81f6-759e63b2bde0)
+![飾品進銷存管理系統首頁](https://github.com/rafree1225/SpringData_Accessory/assets/68884317/b3cc9c53-ff3d-4714-b853-c892b03f6049)
 
 ![商品](https://github.com/rafree1225/SpringData_Accessory/assets/68884317/e6422eb0-53f3-4912-8730-a93bd39eda6d)
 
